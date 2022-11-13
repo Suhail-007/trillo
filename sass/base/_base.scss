@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem === 10px
+}
+
+body {
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  
+  font-family: $default-font-family, 'sans-serif';
+  color: $color-grey-dark-2;
+}
+
+.container {
+  max-width: 120rem;
+  width: 80%;
+  margin: 8rem auto;
+  background-color: $color-grey-light-1;
+  box-shadow: $box-shadow-dark;
+  min-height: 50rem;
+}
+
+.sidebar {
+  background: $color-grey-dark-1;
+  flex:0 0 18%;
+}

@@ -1,0 +1,38 @@
+.header {
+  height: 7rem;
+  background: #fff;
+  border-bottom: $color-grey-light-2;
+  
+  &__logo {
+    height: 3.25rem;
+  }
+  
+  &__form {
+
+    &-search {
+      
+      
+      &-btn{
+       
+       
+      }
+    }
+  }
+  
+  &__user-nav {
+    
+    
+    &-icons {
+      
+    }
+    
+    &__user {
+      width: 3.75rem;
+      border-radius: 50%;
+      
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
