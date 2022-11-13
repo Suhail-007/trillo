@@ -1,35 +1,75 @@
 .header {
+  align-items: center;
+  font-size: 1.4rem;
   height: 7rem;
   background: #fff;
   border-bottom: $color-grey-light-2;
-  
+
   &__logo {
+    margin-left: 3rem;
     height: 3.25rem;
   }
-  
+
   &__form {
+    flex: 0 0 40%;
 
     &-search {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      width: 90%;
+      padding: .7rem 2rem;
+      margin-right: -3.25rem;
+      border: none;
+      border-radius: 100px;
+      transition: all .2s;
+      background: $color-grey-light-2;
+
+      &:focus {
+        width: 100%;
+        outline: none;
+        background: $color-grey-light-3;
+        color: $color-grey-dark-2;
+      }
+
+      &:focus+&-btn {
+        background: $color-grey-light-3;
+      }
       
-      
-      &-btn{
-       
-       
+      &::-webkit-input-placeholder {
+        color: $color-grey-dark-3;
+        font-weight: 100;
+      }
+
+      &-btn {
+        border: none;
+        background: $color-grey-light-2;
+        transition: all .2s;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:active {
+          transform: translateY(2px);
+        }
+        
+        &__icon {
+          fill: $color-grey-dark-3;
+        }
       }
     }
   }
-  
+
   &__user-nav {
-    
-    
-    &-icons {
-      
-    }
-    
+
+
+    &-icons {}
+
     &__user {
       width: 3.75rem;
       border-radius: 50%;
-      
+
       & img {
         width: 100%;
       }

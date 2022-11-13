@@ -1,3 +1,15 @@
 .flex {
   display: flex;
+
+  &__row-Jspace-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__abs-Center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }

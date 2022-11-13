@@ -42,14 +42,68 @@ body {
 .flex {
   display: flex;
 }
+.flex__row-Jspace-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex__abs-Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .header {
+  align-items: center;
+  font-size: 1.4rem;
   height: 7rem;
   background: #fff;
   border-bottom: #f4f2f2;
 }
 .header__logo {
+  margin-left: 3rem;
   height: 3.25rem;
+}
+.header__form {
+  flex: 0 0 40%;
+}
+.header__form-search {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: 90%;
+  padding: 0.7rem 2rem;
+  margin-right: -3.25rem;
+  border: none;
+  border-radius: 100px;
+  transition: all 0.2s;
+  background: #f4f2f2;
+}
+.header__form-search:focus {
+  width: 100%;
+  outline: none;
+  background: #f0eeee;
+  color: #777;
+}
+.header__form-search:focus + .header__form-search-btn {
+  background: #f0eeee;
+}
+.header__form-search::-webkit-input-placeholder {
+  color: #999;
+  font-weight: 100;
+}
+.header__form-search-btn {
+  border: none;
+  background: #f4f2f2;
+  transition: all 0.2s;
+}
+.header__form-search-btn:focus {
+  outline: none;
+}
+.header__form-search-btn:active {
+  transform: translateY(2px);
+}
+.header__form-search-btn__icon {
+  fill: #999;
 }
 .header__user-nav__user {
   width: 3.75rem;

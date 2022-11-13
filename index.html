@@ -14,10 +14,11 @@
 
 <body>
   <div class="container">
-    <header class="header">
+    <header class="header flex__row-Jspace-between">
       <img src="/img/logo.png" alt="Website Logo" class="header__logo">
 
-      <form class="header__form">
+      <form class="header__form flex__abs-Center ">
+
         <input type="text" class="header__form-search" placeholder="Search hotels">
         <button class="header__form-search-btn">
           <svg class="header__form-search-btn__icon u-icon-small">
@@ -28,15 +29,20 @@
 
       <nav class="header__user-nav">
         <div class="header__user-nav__icons">
-          <svg class="header__user-nav__icon u-icon-small">
-            <use href="./img/icons.svg#icon-bookmark"></use>
-          </svg>
-          <svg class="header__user-nav__icon u-icon-small">
-            <use href="./img/icons.svg#icon-chat"></use>
-          </svg>
+          <div class="header__user-nav__icon">
+            <svg class="u-icon-small">
+              <use href="./img/icons.svg#icon-bookmark"></use>
+            </svg>
+          </div>
+
+          <div class="header__user-nav__icon">
+            <svg class="u-icon-small">
+              <use href="./img/icons.svg#icon-chat"></use>
+            </svg>
+          </div>
         </div>
-        
-        
+
+
         <div class="header__user-nav__user">
           <img src="./img/user.png" alt="user photo">
           <span>Suhail</span>
