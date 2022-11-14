@@ -1,14 +1,24 @@
 .flex {
   display: flex;
 
-  &__row-Jspace-between {
+  &-row-Jspace-between {
     display: flex;
     justify-content: space-between;
   }
+  &-col-Jspace-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   
-  &__abs-Center {
+  &-abs-Center {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+  
+  &-row-AI-center {
+    display: flex;
     align-items: center;
   }
 

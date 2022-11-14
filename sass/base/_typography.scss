@@ -1,0 +1,49 @@
+.header {
+  font-size: 1.4rem;
+
+  &-search {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+    &:focus {
+      color: $color-grey-dark-2;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-3;
+      font-weight: 100;
+    }
+  }
+
+  &__user-nav {
+    &__icon-text {
+      font-size: .8rem;
+      color: #fff;
+    }
+  }
+}
+
+.sidebar {
+  font-size: 1.4rem;
+
+  &__list {
+    
+    &__item-link {
+      &:visited,
+      &:link {
+        color: $color-grey-light-1;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      &-text {}
+    }
+  }
+
+  &-legal {
+    font-size: 1.2rem;
+    text-align: center;
+    color: $color-grey-light-4;
+  }
+}

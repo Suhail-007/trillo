@@ -16,14 +16,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  
+
+  line-height: 1.6;
   font-family: $default-font-family, 'sans-serif';
   color: $color-grey-dark-2;
 }
 
 .container {
   max-width: 120rem;
-  width: 80%;
   margin: 8rem auto;
   background-color: $color-grey-light-1;
   box-shadow: $box-shadow-dark;
@@ -32,5 +32,73 @@ body {
 
 .sidebar {
   background: $color-grey-dark-1;
-  flex:0 0 18%;
+  flex: 0 0 18%;
+  display: flex;
+
+  &__list {
+    margin-top: 3.5rem;
+    list-style: none;
+
+    &__item {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: .5rem;
+      }
+
+      &::after {
+        content: "";
+        background: $color-primary;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 3px;
+        position: absolute;
+        transform: scaleY(0);
+        transition: transform .3s, width .4s cubic-bezier(1, 0, 0, 1) .3s,
+          background-color .1s;
+      }
+      
+      &:hover::after,
+      &.active::after{
+        transform: scaleY(1);
+        width: 100%;
+      }
+      
+      &:active::after {
+        background-color: $color-primary-light;
+      }
+
+      &-link {
+
+        &:visited,
+        &:link {
+          padding: 1.5rem 3rem;
+          display: flex;
+          align-items: center;
+          position: relative;
+          z-index: 2;
+        }
+      }
+
+      &-icon {
+        fill: currentColor;
+        margin-right: 2rem;
+        margin-right: 2rem;
+      }
+
+      &-text {}
+    }
+  }
+
+  &-legal {
+    padding: 2.5rem;
+  }
+}
+
+.gallery {
+  & img {
+    width: 25px;
+  }
 }

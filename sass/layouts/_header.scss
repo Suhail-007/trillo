@@ -1,12 +1,11 @@
 .header {
   align-items: center;
-  font-size: 1.4rem;
   height: 7rem;
   background: #fff;
   border-bottom: $color-grey-light-2;
 
   &__logo {
-    margin-left: 3rem;
+    margin-left: 2rem;
     height: 3.25rem;
   }
 
@@ -14,9 +13,6 @@
     flex: 0 0 40%;
 
     &-search {
-      font-family: inherit;
-      font-size: inherit;
-      color: inherit;
       width: 90%;
       padding: .7rem 2rem;
       margin-right: -3.25rem;
@@ -29,16 +25,10 @@
         width: 100%;
         outline: none;
         background: $color-grey-light-3;
-        color: $color-grey-dark-2;
       }
 
       &:focus+&-btn {
         background: $color-grey-light-3;
-      }
-      
-      &::-webkit-input-placeholder {
-        color: $color-grey-dark-3;
-        font-weight: 100;
       }
 
       &-btn {
@@ -53,7 +43,7 @@
         &:active {
           transform: translateY(2px);
         }
-        
+
         &__icon {
           fill: $color-grey-dark-3;
         }
@@ -62,17 +52,47 @@
   }
 
   &__user-nav {
+    align-self: stretch;
 
+    display: flex;
+    align-items: center;
 
-    &-icons {}
+    &>* {
+      padding: 0 2rem;
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    &>*:hover {
+      background-color: $color-grey-light-3;
+    }
+
+    &__icon {
+      position: relative;
+      &>svg {
+        fill: $color-grey-dark-2;
+      }
+    }
+
 
     &__user {
-      width: 3.75rem;
-      border-radius: 50%;
-
       & img {
-        width: 100%;
+        width: 3.75rem;
+        border-radius: 50%;
+        margin-right: 2rem;
       }
+    }
+
+    &__icon-text {
+      height: 1.75rem;
+      width: 1.75rem;
+      border-radius: 50%;
+      background: $color-primary;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.1rem;
     }
   }
 }

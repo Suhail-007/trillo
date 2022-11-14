@@ -14,10 +14,10 @@
 
 <body>
   <div class="container">
-    <header class="header flex__row-Jspace-between">
+    <header class="header flex-row-Jspace-between">
       <img src="/img/logo.png" alt="Website Logo" class="header__logo">
 
-      <form class="header__form flex__abs-Center ">
+      <form class="header__form flex-abs-Center ">
 
         <input type="text" class="header__form-search" placeholder="Search hotels">
         <button class="header__form-search-btn">
@@ -28,18 +28,18 @@
       </form>
 
       <nav class="header__user-nav">
-        <div class="header__user-nav__icons">
-          <div class="header__user-nav__icon">
-            <svg class="u-icon-small">
-              <use href="./img/icons.svg#icon-bookmark"></use>
-            </svg>
-          </div>
+        <div class="header__user-nav__icon">
+          <svg class="u-icon-small">
+            <use href="./img/icons.svg#icon-bookmark"></use>
+          </svg>
+          <span class="header__user-nav__icon-text flex-abs-Center">7</span>
+        </div>
 
-          <div class="header__user-nav__icon">
-            <svg class="u-icon-small">
-              <use href="./img/icons.svg#icon-chat"></use>
-            </svg>
-          </div>
+        <div class="header__user-nav__icon">
+          <svg class="u-icon-small">
+            <use href="./img/icons.svg#icon-chat"></use>
+          </svg>
+          <span class="header__user-nav__icon-text flex-abs-Center">27</span>
         </div>
 
 
@@ -50,8 +50,59 @@
       </nav>
     </header>
     <div class="content flex">
-      <nav class="sidebar">nav</nav>
-      <main class="hotel-view">hotel view</main>
+      <nav class="sidebar flex-col-Jspace-between">
+        <ul class="sidebar__list">
+          <li class="sidebar__list__item active">
+            <a href="#" class="sidebar__list__item-link flex-row-AI-center">
+              <svg class="sidebar__list__item-icon u-icon-small">
+                <use xlink:href="./img/icons.svg#icon-home"></use>
+              </svg>
+              <span class="sidebar__list__item-text">Home</span>
+            </a>
+          </li>
+          <li class="sidebar__list__item">
+            <a href="#" class="sidebar__list__item-link flex-row-AI-center">
+              <svg class="sidebar__list__item-icon u-icon-small">
+                <use xlink:href="./img/icons.svg#icon-aircraft-take-off"></use>
+              </svg>
+              <span class="sidebar__list__item-text">Flight</span>
+            </a>
+          </li>
+          <li class="sidebar__list__item">
+            <a href="#" class="sidebar__list__item-link flex-row-AI-center">
+              <svg class="sidebar__list__item-icon u-icon-small">
+                <use xlink:href="./img/icons.svg#icon-key"></use>
+              </svg>
+              <span class="sidebar__list__item-text">Car rentals</span>
+            </a>
+          </li>
+          <li class="sidebar__list__item">
+            <a href="#" class="sidebar__list__item-link flex-row-AI-center">
+              <svg class="sidebar__list__item-icon u-icon-small">
+                <use xlink:href="./img/icons.svg#icon-map"></use>
+              </svg>
+              <span class="sidebar__list__item-text">Tours</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-legal">
+          &copy; 2017 by trillo. All rights reserved
+        </div>
+      </nav>
+      <main class="hotel-view">
+        <div class="gallery">
+          <figure class="gallery_item">
+            <img src="./img/hotel-1.jpg" alt="Hotel photo One" class="gallery_photo">
+          </figure>
+          <figure class="gallery_item">
+            <img src="./img/hotel-2.jpg" alt="Hotel photo two" class="gallery_photo">
+          </figure>
+          <figure class="gallery_item">
+            <img src="./img/hotel-3.jpg" alt="Hotel photo three" class="gallery_photo">
+          </figure>
+        </div>
+      </main>
     </div>
   </div>
 </body>

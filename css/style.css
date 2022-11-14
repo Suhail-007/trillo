@@ -16,13 +16,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+  line-height: 1.6;
   font-family: "Open Sans", "sans-serif";
   color: #777;
 }
 
 .container {
   max-width: 120rem;
-  width: 80%;
   margin: 8rem auto;
   background-color: #faf9f9;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
@@ -32,6 +32,89 @@ body {
 .sidebar {
   background: #333;
   flex: 0 0 18%;
+  display: flex;
+}
+.sidebar__list {
+  margin-top: 3.5rem;
+  list-style: none;
+}
+.sidebar__list__item {
+  position: relative;
+}
+.sidebar__list__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.sidebar__list__item::after {
+  content: "";
+  background: #eb2f64;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 3px;
+  position: absolute;
+  transform: scaleY(0);
+  transition: transform 0.3s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.3s, background-color 0.1s;
+}
+.sidebar__list__item:hover::after, .sidebar__list__item.active::after {
+  transform: scaleY(1);
+  width: 100%;
+}
+.sidebar__list__item:active::after {
+  background-color: #FF3366;
+}
+.sidebar__list__item-link:visited, .sidebar__list__item-link:link {
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.sidebar__list__item-icon {
+  fill: currentColor;
+  margin-right: 2rem;
+  margin-right: 2rem;
+}
+.sidebar-legal {
+  padding: 2.5rem;
+}
+
+.gallery img {
+  width: 25px;
+}
+
+.header {
+  font-size: 1.4rem;
+}
+.header-search {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+.header-search:focus {
+  color: #777;
+}
+.header-search::-webkit-input-placeholder {
+  color: #999;
+  font-weight: 100;
+}
+.header__user-nav__icon-text {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.sidebar {
+  font-size: 1.4rem;
+}
+.sidebar__list__item-link:visited, .sidebar__list__item-link:link {
+  color: #faf9f9;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.sidebar-legal {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #ccc;
 }
 
 .u-icon-small {
@@ -42,34 +125,39 @@ body {
 .flex {
   display: flex;
 }
-.flex__row-Jspace-between {
+.flex-row-Jspace-between {
   display: flex;
   justify-content: space-between;
 }
-.flex__abs-Center {
+.flex-col-Jspace-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex-abs-Center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.flex-row-AI-center {
+  display: flex;
   align-items: center;
 }
 
 .header {
   align-items: center;
-  font-size: 1.4rem;
   height: 7rem;
   background: #fff;
   border-bottom: #f4f2f2;
 }
 .header__logo {
-  margin-left: 3rem;
+  margin-left: 2rem;
   height: 3.25rem;
 }
 .header__form {
   flex: 0 0 40%;
 }
 .header__form-search {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
   width: 90%;
   padding: 0.7rem 2rem;
   margin-right: -3.25rem;
@@ -82,14 +170,9 @@ body {
   width: 100%;
   outline: none;
   background: #f0eeee;
-  color: #777;
 }
 .header__form-search:focus + .header__form-search-btn {
   background: #f0eeee;
-}
-.header__form-search::-webkit-input-placeholder {
-  color: #999;
-  font-weight: 100;
 }
 .header__form-search-btn {
   border: none;
@@ -105,17 +188,45 @@ body {
 .header__form-search-btn__icon {
   fill: #999;
 }
-.header__user-nav__user {
-  width: 3.75rem;
-  border-radius: 50%;
+.header__user-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.header__user-nav > * {
+  padding: 0 2rem;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header__user-nav > *:hover {
+  background-color: #f0eeee;
+}
+.header__user-nav__icon {
+  position: relative;
+}
+.header__user-nav__icon > svg {
+  fill: #777;
 }
 .header__user-nav__user img {
-  width: 100%;
+  width: 3.75rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.header__user-nav__icon-text {
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 50%;
+  background: #eb2f64;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.1rem;
 }
 
 .hotel-view {
-  background: #fff;
   flex: 1;
+  height: 50rem;
 }
 
 /*# sourceMappingURL=style.css.map */
