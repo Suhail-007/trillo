@@ -40,7 +40,8 @@ body {
   margin: 8rem auto;
   background-color: #faf9f9;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  min-height: 50rem;
+  max-width: 180rem;
+  min-height: 100%;
 }
 
 .sidebar {
@@ -138,7 +139,6 @@ body {
 }
 .overview__rating {
   color: #fff;
-  /* text-align: center; */
 }
 .overview__rating__average {
   font-size: 2.25rem;
@@ -149,6 +149,13 @@ body {
   letter-spacing: 1px;
 }
 
+.details__description {
+  font-size: 1.4rem;
+}
+.details__recommand {
+  font-size: 1.4rem;
+  color: #999;
+}
 .u-icon-small {
   height: 2rem;
   width: 2rem;
@@ -172,15 +179,23 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.flex-row-AI-center {
+  display: flex;
+  align-items: center;
+}
+.flex-row-AI-cntr-Jspace-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 .flex-col-Jspace-between {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.flex-abs-enter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .flex-col-abs-center {
   display: flex;
@@ -188,8 +203,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-.flex-row-AI-center {
+.flex-abs-center {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -197,7 +213,7 @@ body {
   align-items: center;
   height: 7rem;
   background: #fff;
-  border-bottom: 1px solid #f4f2f2;
+  border-bottom: 1px solid #f0eeee;
 }
 .header__logo {
   margin-left: 2rem;
@@ -275,7 +291,6 @@ body {
 
 .hotel-view {
   flex: 1;
-  height: 50rem;
 }
 
 .gallery {
@@ -287,7 +302,7 @@ body {
 }
 
 .overview {
-  border-bottom: 1px solid #f4f2f2;
+  border-bottom: 1px solid #f0eeee;
 }
 .overview__heading {
   padding: 1.5rem 3rem;
@@ -319,6 +334,56 @@ body {
 }
 .overview__rating__average {
   margin-bottom: -3px;
+}
+
+.details {
+  padding: 4.5rem;
+  background: #faf9f9;
+  border-bottom: 1px solid #f0eeee;
+}
+.details__description {
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+.details__description p:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+.details__list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: 1px solid #f0eeee;
+  border-bottom: 1px solid #f0eeee;
+}
+.details__list__item {
+  flex: 0 0 50%;
+  margin-bottom: 0.7rem;
+}
+.details__list__item::before {
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.7rem;
+  background-color: #eb2f64;
+  -webkit-mask: url("../../img/chevron-thin-right.svg");
+  -webkit-mask-size: cover;
+}
+.details__recommand__text {
+  margin-right: auto;
+}
+.details__recommand__friends img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-sizing: content-box;
+  margin-left: -1.5rem;
+}
+.details__reviews {
+  flex: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

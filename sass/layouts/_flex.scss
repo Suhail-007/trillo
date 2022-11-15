@@ -6,17 +6,28 @@
     justify-content: space-between;
   }
 
+  &-row-AI-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  &-row-AI-cntr-Jspace-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &-row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &-col-Jspace-between {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-  &-abs-enter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   &-col-abs-center {
     display: flex;
@@ -25,10 +36,9 @@
     align-items: center;
   }
 
-
-  &-row-AI-center {
+  &-abs-center {
     display: flex;
+    justify-content: center;
     align-items: center;
   }
-
 }

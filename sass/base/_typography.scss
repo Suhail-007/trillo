@@ -64,17 +64,30 @@
 
   &__rating {
     color: $color-white;
-    /* text-align: center; */
-    
+
     &__average {
       font-size: 2.25rem;
     }
-    
+
     &__counts {
       font-size: .8rem;
       text-transform: uppercase;
-      letter-spacing:1px;
+      letter-spacing: 1px;
     }
-    
+
   }
+}
+
+.details {
+
+  &__description {
+    font-size: 1.4rem;
+  }
+
+  &__recommand {
+    font-size: 1.4rem;
+    color: $color-grey-dark-3;
+  }
+
+  &__reviews {}
 }
