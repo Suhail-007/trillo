@@ -5,18 +5,27 @@
     display: flex;
     justify-content: space-between;
   }
+
   &-col-Jspace-between {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  
-  &-abs-Center {
+
+  &-abs-enter {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
+  &-col-abs-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
   &-row-AI-center {
     display: flex;
     align-items: center;

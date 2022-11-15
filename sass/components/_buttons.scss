@@ -1,0 +1,12 @@
+.btn {
+  &-bottom-border--orangered {
+    border: none;
+    background: transparent;
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    color: $color-primary;
+    padding-bottom: 2px;
+    transition: all .2s;
+    cursor: pointer;
+  }
+}

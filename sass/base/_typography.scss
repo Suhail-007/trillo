@@ -19,7 +19,7 @@
   &__user-nav {
     &__icon-text {
       font-size: .8rem;
-      color: #fff;
+      color: $color-white;
     }
   }
 }
@@ -28,8 +28,9 @@
   font-size: 1.4rem;
 
   &__list {
-    
+
     &__item-link {
+
       &:visited,
       &:link {
         color: $color-grey-light-1;
@@ -45,5 +46,35 @@
     font-size: 1.2rem;
     text-align: center;
     color: $color-grey-light-4;
+  }
+}
+
+.overview {
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__location {
+    font-size: 1.2rem;
+  }
+
+  &__rating {
+    color: $color-white;
+    /* text-align: center; */
+    
+    &__average {
+      font-size: 2.25rem;
+    }
+    
+    &__counts {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing:1px;
+    }
+    
   }
 }

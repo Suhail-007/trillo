@@ -59,13 +59,13 @@ body {
         transition: transform .3s, width .4s cubic-bezier(1, 0, 0, 1) .3s,
           background-color .1s;
       }
-      
+
       &:hover::after,
-      &.active::after{
+      &.active::after {
         transform: scaleY(1);
         width: 100%;
       }
-      
+
       &:active::after {
         background-color: $color-primary-light;
       }
@@ -94,11 +94,5 @@ body {
 
   &-legal {
     padding: 2.5rem;
-  }
-}
-
-.gallery {
-  & img {
-    width: 25px;
   }
 }
