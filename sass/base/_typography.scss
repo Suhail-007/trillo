@@ -79,15 +79,32 @@
 }
 
 .details {
-
-  &__description {
-    font-size: 1.4rem;
-  }
+  font-size: 1.4rem;
 
   &__recommand {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: $color-grey-dark-3;
   }
 
-  &__reviews {}
+  &__reviews {
+
+    &__review {
+      &__name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      &__date {
+        font-size: 1rem;
+        color: $color-grey-dark-3;
+      }
+
+      &__rating {
+        color: $color-primary;
+        font-size: 2.2rem;
+        font-weight: 300;
+      }
+    }
+  }
 }

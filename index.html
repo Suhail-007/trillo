@@ -12,7 +12,7 @@
   <title>trillo &mdash; Your all-in-one booking app</title>
 </head>
 
-<body>
+<body class="dark">
   <div class="container">
     <header class="header flex-row-Jspace-between">
       <img src="./img/logo.png" alt="Website Logo" class="header__logo">
@@ -167,8 +167,36 @@
               </div>
             </div>
           </div>
-          <div class="details__reviews">
-            review
+          <div class="details__reviews flex-col-AI-center">
+            <figure class="details__reviews__review">
+              <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta doloribus iure voluptas quibusdam, sed similique earum repellendus ratione adipisci officiis.
+              </blockquote>
+              <figcaption class="flex  &-row-AI-center">
+                <img src="./img/user-1.jpg" alt="John Smith">
+                <div class="details__reviews__review__name-date">
+                  <p class="details__reviews__review__name">John Smith</p>
+                  <p class="details__reviews__review__date">15 Nov 2022</p>
+                </div>
+                <div class="details__reviews__review__rating">7.8</div>
+              </figcaption>
+            </figure>
+            
+            <figure class="details__reviews__review flex-col">
+              <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta doloribus iure voluptas quibusdam, sed similique earum repellendus ratione adipisci officiis.
+              </blockquote>
+              <figcaption class="flex-row-AI-center">
+                <img src="./img/user-2.jpg" alt="John Smith">
+                <div class="details__reviews__review__name-date">
+                  <p class="details__reviews__review__name">Mary jane</p>
+                  <p class="details__reviews__review__date">5 Nov 2022</p>
+                </div>
+                <div class="details__reviews__review__rating">9.3</div>
+              </figcaption>
+            </figure>
+            
+            <button class="show-btn btn-bottom-border--orangered">Show All <span>&rarr;</span></button>
           </div>
         </div>
       </main>
