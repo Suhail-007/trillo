@@ -37,7 +37,6 @@ body {
 }
 
 .container {
-  max-width: 120rem;
   margin: 8rem auto;
   background-color: #faf9f9;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
@@ -186,6 +185,55 @@ body {
   padding-bottom: 2px;
   transition: all 0.2s;
   cursor: pointer;
+}
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+  background-color: #fff;
+}
+.cta__heading {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.cta__btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 100px;
+  background: none;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(to right, #FF3366, #BA265D);
+}
+.cta__btn span {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+}
+.cta__btn--visible {
+  padding: 2rem 7.5rem;
+}
+.cta__btn--hidden {
+  padding: 2rem 0;
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+.cta__btn:hover .cta__btn--visible {
+  transform: translateY(100%);
+}
+.cta__btn:hover .cta__btn--hidden {
+  top: 0;
+}
+.cta__btn:focus {
+  outline: none;
+  animation: pulsate 1s infinite;
 }
 
 .flex {
@@ -444,15 +492,14 @@ body {
 .details__reviews__review__name {
   margin-bottom: 0.4rem;
 }
-
-.show-btn span {
+.details .show-btn span {
   margin-left: 0.4rem;
   transition: margin-left 0.2s;
 }
-.show-btn:hover {
+.details .show-btn:hover {
   color: #333;
 }
-.show-btn:hover span {
+.details .show-btn:hover span {
   margin-left: 0.8rem;
 }
 

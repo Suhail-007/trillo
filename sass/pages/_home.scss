@@ -165,19 +165,19 @@
       }
     }
   }
-}
 
-.show-btn {
-  span {
-    margin-left: .4rem;
-    transition: margin-left .2s;
-  }
-  
-  &:hover {
-    color: $color-grey-dark-1;
+  .show-btn {
     span {
-      margin-left: .8rem;
+      margin-left: .4rem;
+      transition: margin-left .2s;
+    }
+
+    &:hover {
+      color: $color-grey-dark-1;
+
+      span {
+        margin-left: .8rem;
+      }
     }
   }
-
 }
