@@ -71,6 +71,7 @@
 
     &__icon {
       position: relative;
+
       &>svg {
         fill: $color-grey-dark-2;
       }
@@ -93,6 +94,13 @@
       position: absolute;
       top: 1.5rem;
       right: 1.1rem;
+      box-sizing: content-box;
+
+      @include respon(phone) {
+        padding: .3rem;
+        top: 1rem;
+        right: .5rem;
+      }
     }
   }
 }

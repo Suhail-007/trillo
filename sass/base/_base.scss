@@ -9,6 +9,14 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1rem === 10px
+
+  @include respon(large) {
+    font-size: 50%; //1rem === 8px
+  }
+
+  @include respon(phone) {
+    font-size: 35%; //1rem === 8px
+  }
 }
 
 body {
@@ -26,24 +34,45 @@ body {
   margin: 8rem auto;
   background-color: $color-grey-light-1;
   box-shadow: $box-shadow-dark;
-  max-width: 180rem;
-  min-height: 100%;
+  max-width: 150rem;
+
+  @include respon(large) {
+    margin: 0;
+  }
+}
+
+.content {
+  @include respon(tab-port) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
   background: $color-grey-dark-1;
   flex: 0 0 18%;
-  display: flex;
 
   &__list {
     margin-top: 3.5rem;
     list-style: none;
+
+    @include respon(tab-port) {
+      display: flex;
+      margin: 0;
+    }
 
     &__item {
       position: relative;
 
       &:not(:last-child) {
         margin-bottom: .5rem;
+
+        @include respon(tab-port) {
+          margin: 0;
+        }
+      }
+
+      @include respon(tab-port) {
+        flex: 1;
       }
 
       &::after {
@@ -75,22 +104,39 @@ body {
         &:visited,
         &:link {
           padding: 1.5rem 3rem;
-          display: flex;
-          align-items: center;
           position: relative;
           z-index: 2;
+
+          @include respon(tab-port) {
+            justify-content: center;
+            padding: 2rem;
+          }
+
+          @include respon(phone) {
+            /*             padding: 1rem .5rem; */
+            flex-direction: column;
+          }
         }
       }
 
       &-icon {
         fill: currentColor;
         margin-right: 2rem;
-        margin-right: 2rem;
+
+        @include respon(phone) {
+          margin-right: 0;
+          margin-bottom: .7rem;
+        }
       }
     }
   }
 
   &-legal {
     padding: 2.5rem;
+
+    @include respon(tab-port) {
+      display: none;
+      padding: 0;
+    }
   }
 }

@@ -1,0 +1,30 @@
+@mixin respon($type) {
+
+  //600px
+  @if $type==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content
+    }
+  }
+
+  //900px
+  @if $type==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content
+    }
+  }
+
+  //1100px
+  @if $type==large {
+    @media only screen and (max-width: 68.75em) {
+      @content
+    }
+  }
+
+  //1200px
+  @if $type==tab-land {
+    @media only screen and (max-width: 75em) {
+      @content
+    }
+  }
+}

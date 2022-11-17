@@ -1,5 +1,5 @@
 .header {
-  font-size: 1.4rem;
+  font-size: 1.9rem;
 
   &-search {
     font-family: inherit;
@@ -18,14 +18,14 @@
 
   &__user-nav {
     &__icon-text {
-      font-size: .8rem;
+      font-size: 1.1rem;
       color: $color-white;
     }
   }
 }
 
 .sidebar {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 
   &__list {
 
@@ -37,13 +37,11 @@
         text-decoration: none;
         text-transform: uppercase;
       }
-
-      &-text {}
     }
   }
 
   &-legal {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
     color: $color-grey-light-4;
   }
@@ -79,10 +77,10 @@
 }
 
 .details {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 
   &__recommand {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: $color-grey-dark-3;
   }
 
@@ -90,19 +88,19 @@
 
     &__review {
       &__name {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: 600;
         text-transform: uppercase;
       }
 
       &__date {
-        font-size: 1rem;
+        font-size: 1.3rem;
         color: $color-grey-dark-3;
       }
 
       &__rating {
         color: $color-primary;
-        font-size: 2.2rem;
+        font-size: 2.6rem;
         font-weight: 300;
       }
     }

@@ -64,11 +64,31 @@
   background: $color-grey-light-1;
   border-bottom: $line;
 
+  @include respon(tab-port) {
+    padding: 3rem;
+  }
+
+  @include respon(phone) {
+    flex-direction: column;
+  }
+
   &__description {
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
     box-shadow: $box-shadow-light;
+    background: $color-white;
+    border-radius: 3px;
+
+    @include respon(tab-port) {
+      padding: 2rem;
+      margin-right: 3rem;
+    }
+
+    @include respon(phone) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
 
     & p:not(:last-of-type) {
       margin-bottom: 2rem;
@@ -95,7 +115,7 @@
         margin-right: .7rem;
 
         background-color: $color-primary;
-        -webkit-mask: url("../../img/arrow-right.svg");
+        -webkit-mask: url("../../img/svgs/arrow-right.svg");
         -webkit-mask-size: cover;
 
       }
@@ -108,6 +128,8 @@
     }
 
     &__friends {
+      display: flex;
+
       & img {
         height: 3rem;
         width: 3rem;
@@ -115,6 +137,7 @@
         border: 3px solid $color-white;
         box-sizing: content-box;
         margin-left: -1.5rem;
+
       }
     }
   }
@@ -128,7 +151,12 @@
       margin-bottom: 3.5rem;
       position: relative;
       overflow: hidden;
+      border-radius: 3px;
 
+      @include respon(tab-port) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+      }
 
       &::before {
         content: "\201C";

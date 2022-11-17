@@ -2,6 +2,10 @@
   padding: 3.5rem 0;
   text-align: center;
   background-color: #fff;
+  
+   @include respon(tab-port) {
+     padding: 2.5rem 0;
+   }
 
   &__heading {
     font-size: 2rem;
@@ -11,7 +15,7 @@
   }
 
   &__btn {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 300;
     text-transform: uppercase;
     border: none;
@@ -51,6 +55,7 @@
     
     &:focus {
       outline: none;
+      background-image: linear-gradient(to right,$color-primary-dark, $color-primary-light);
       animation: pulsate 1s infinite;
     }
   }
