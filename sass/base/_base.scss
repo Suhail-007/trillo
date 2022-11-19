@@ -17,6 +17,14 @@ html {
   @include respon(phone) {
     font-size: 35%; //1rem === 8px
   }
+
+  @include respon(m-phone) {
+    font-size: 31%;
+  }
+
+  @include respon(sm-phone) {
+    font-size: 25%;
+  }
 }
 
 body {
@@ -113,8 +121,11 @@ body {
           }
 
           @include respon(phone) {
-            /*             padding: 1rem .5rem; */
             flex-direction: column;
+          }
+
+          @include respon(sm-phone) {
+            padding: 1rem !important;
           }
         }
       }

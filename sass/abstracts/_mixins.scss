@@ -1,5 +1,19 @@
 @mixin respon($type) {
 
+  //320
+  @if $type==sm-phone {
+    @media only screen and (max-width: 20em) {
+      @content
+    }
+  }
+
+  //375 
+  @if $type==m-phone {
+    @media only screen and (max-width: 24.4em) {
+      @content
+    }
+  }
+
   //600px
   @if $type==phone {
     @media only screen and (max-width: 37.5em) {
